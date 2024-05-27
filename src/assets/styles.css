@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --nav-color: #241400;
+    --nav-icon-color: #e16a00;
+    --footer-color: #4d2900;
+    --text-color: #F5F6F7;
+    --cursor-color: #D7D7D7;
+    --background-color: #FFFAF5;
+}
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: var(--background-color);
+    
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: var(--nav-color);
+    padding: 30px;
+    height: 70px;
+}
+img {
+    max-width: 100%;
+}
+.logo {
+    height: 42px;
+}
+  
+  nav a, nav a i {
+    font-weight: bold;
+    color: var(--text-color);
+    transition: color 0.3s ease;
+
+    text-decoration: none;
+  }
+  nav a:hover {
+    color: var(--nav-icon-color);
+    transform: scaleX(1.05);
+    i {
+        color: var(--text-color);
+    }
+  }
+  
+  nav a.router-link-exact-active {
+    color: var(--nav-icon-color);
+    i {
+        color: var(--text-color);
+    }
+  }
+  .wrapper {
+    width: 90%;
+    margin: 0 auto;
+
+    margin-top: 40px;
+  }
