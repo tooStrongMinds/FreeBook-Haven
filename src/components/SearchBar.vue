@@ -24,18 +24,10 @@
 
 <style scoped>
 span {
-    /* display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #FFFAF5;
-    padding: 10px;
-    border-radius: 20px;
-    padding-right: 50px; */
-
     background: #fffaf5;
     border-radius: 20px;
     height: 40px;
-    width: 30%;
+    width: 50%;
     padding-right: 30px;
 
     display: flex;
@@ -54,7 +46,6 @@ input {
 }
 i {
     color: #e16a00;
-    font-size: 20px;
-    
+    font-size: 20px; 
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
   <nav>
     <img :src="logo" alt="Site Logo" class="logo" />
-    <SearchBar @search="performSearch"/>
+    <SearchBar @search="performSearch" class="search"/>
     <NavBar />
   </nav>
   <router-view/>
@@ -14,12 +14,12 @@ import SearchBar from '@/components/SearchBar.vue'
 export default {
   data() {
     return {
-      logo: require('@/assets/Group.png')
+      logo: require('@/assets/Group.png'),
     }
   },
   components: {
     NavBar, SearchBar
-  }
+  },
 }
 </script>
 

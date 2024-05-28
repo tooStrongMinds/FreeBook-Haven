@@ -1,8 +1,10 @@
 <template>
-  <SearchBar @search="performSearch"/>
-  <div class="explore" v-if="isSearch">
-    <h1>Your Search Results</h1>
-    <BookCard :books="filteredBooks" :bookmarkedBooks="bookMarked" @toggle-library="toggleLibrary"/>
+  <div class="wrapper">
+    <SearchBar @search="performSearch"/>
+    <div class="explore" v-if="isSearch">
+      <h1>Your Search Results</h1>
+      <BookCard :books="filteredBooks" :bookmarkedBooks="bookMarked" @toggle-library="toggleLibrary"/>
+    </div>
   </div>
 </template>
 

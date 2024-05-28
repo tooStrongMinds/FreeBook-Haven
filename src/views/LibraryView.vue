@@ -1,5 +1,5 @@
 <template>
-    <div class="library">
+    <div class="library wrapper">
       <h2>Your Library</h2>
       
       <BookCard :books="libraryBooks" :bookmarkedBooks="libraryBooks" @toggle-library="removeFromLibrary"/>

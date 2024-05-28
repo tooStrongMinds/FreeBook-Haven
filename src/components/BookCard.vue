@@ -9,8 +9,10 @@
                   <h2>{{ book.title }}</h2>
                     <p>{{ book.author }}</p>
                 </span>
-                <button @click.prevent="toggleLibrary(book)"><i class="fa-regular fa-bookmark" v-if="!isFavorite(book)"></i>
-                            <i class="fa-solid fa-bookmark" v-else></i></button>
+                <button @click.prevent="toggleLibrary(book)">
+                    <i class="fa-regular fa-bookmark" v-if="!isFavorite(book)"></i>
+                    <i class="fa-solid fa-bookmark" v-else></i>
+                </button>
               </div>
             </div>
           </a>
@@ -67,14 +69,14 @@ export default {
   background: #fff;
   padding: 10px;
   border-radius: 10px;
-  box-shadow: 6px 6px 8px #241400;
+  box-shadow: 4px 4px 10px #241400;
 
   
 
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: 20px;
   transition: transform 0.2s;
 }
 
@@ -89,7 +91,7 @@ export default {
 
 .bookCard img {
   height: auto;
-  aspect-ratio: 3 / 4;
+  aspect-ratio: 4 / 4.9;
 }
 button {
   border: none;
@@ -114,7 +116,7 @@ a .desc {
 
 h2 {
   font-size: 18px;
-  height: 50px;
+  height: 100px;
   margin-inline: 20px;
 
   align-content: center;
