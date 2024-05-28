@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    <SearchBar @search="performSearch" class="search"/>
+    <SearchBar @search="performSearch"/>
     <div class="explore" v-if="isSearch">
       <h1>Your Search Results</h1>
       <BookCard :books="filteredBooks" :bookmarkedBooks="bookMarked" @toggle-library="toggleLibrary"/>
@@ -79,9 +79,3 @@ export default {
   // }
 }
 </script>
-
-<style scoped>
-.search {
-  border: 1px solid #241400;
-}
-</style>
