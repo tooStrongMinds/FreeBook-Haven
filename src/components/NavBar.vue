@@ -1,18 +1,19 @@
 <template>
-    <div :class="{'scrolled-nav': scrollPosition}">
+    <div class="menu">
+        <div class="icon">
+            <i class="fas fa-bars"
+            @click="showMenu()" v-if="!showMobileMenu">
+            </i>
+        </div>
         <div class="menuContent" :class="this.showMobileMenu ? 'open-menu' : 'close-menu'">
-            <div class="navigation" @click="closeMenu">
+            <i class="fa-solid fa-xmark" @click="closeMenu()" v-if="showMobileMenu"></i>
+            <div class="navigation" :class="!showMobileMenu ? 'none' : 'show'" @click="closeMenu">
                 <router-link to="/" class="nav-link"><i class="fa-solid fa-house fa-xl"></i>Home</router-link>
                 <router-link to="/explore" class="nav-link"><i class="fa-regular fa-compass"></i>Explore</router-link>
                 <router-link to="/library" class="nav-link"><i class="fa-solid fa-book-bookmark fa-xl"></i>Library</router-link>
             </div>
         </div>
-        <div class="icon">
-            <i class="fas fa-bars"
-            @click="showMenu()" v-if="!showMobileMenu">
-            </i>
-            <i class="fa-solid fa-xmark" @click="closeMenu()" v-if="showMobileMenu"></i>
-        </div>
+        
     </div>
 </template>
 
@@ -56,18 +57,51 @@ i {
     .icon {
         display: unset;
     }
+    .menuContent {
+       display: flex;
+       flex-direction: column;
+       gap: 20px;
+    }
+    .fa-xmark {
+        font-size: 25px;
+        text-align: left;
+        padding-left: 20px;
+    }
     .navigation {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding-left: 20px;
+        
+    }
+    .none {
+        display: none;
+    }
+    .show {
+        display: flex;
+        gap: 30px;
     }
     .open-menu {
-        opacity: 1;
-        background: yellowgreen;
-        padding-top: 20px;
+        background: #241400;
+        padding-top: 30px;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding-right: 100vw;
+
+        transform: translateY(0%);
+        transition: all 0.5s ease-in-out;
+        height: 100vh;
+        
     }
     .close-menu {
-        opacity: 1;
+    
         height: 0;
         padding: 0;
+        transform: translateY(0%);
+        transition: all 0.5s ease-in-out;
+    
     }
 }
 
